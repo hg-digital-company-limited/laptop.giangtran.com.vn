@@ -194,7 +194,7 @@ class UserPageController extends Controller
     
             // Cấu hình VNPAY
             $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
-            $vnp_Returnurl = 'http://localhost:8000/checkpayment'; // Đường dẫn kiểm tra thanh toán
+            $vnp_Returnurl = 'https://computers.giangtran.com.vn/checkpayment'; // Đường dẫn kiểm tra thanh toán
             $vnp_TmnCode = "R3E63P5P"; // Mã website tại VNPAY
             $vnp_HashSecret = "GXDEHIEBSREFTEALNKYBXMKDKVVBEJPC"; // Chuỗi bí mật
     
