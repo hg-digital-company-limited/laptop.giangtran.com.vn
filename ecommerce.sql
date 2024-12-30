@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 30, 2024 lúc 12:04 PM
+-- Thời gian đã tạo: Th12 30, 2024 lúc 12:51 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -212,7 +212,7 @@ CREATE TABLE `donhang` (
   `Email` varchar(255) DEFAULT NULL,
   `DiaChi` varchar(255) DEFAULT NULL,
   `idUser` int(11) DEFAULT NULL,
-  `updated_at` date NOT NULL DEFAULT current_timestamp()
+  `updated_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
