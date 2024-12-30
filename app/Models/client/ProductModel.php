@@ -10,7 +10,15 @@ use DB;
 class ProductModel extends Model
 {
     use HasFactory;
-
+    public function getGiaSanPham($idLoaiSp)
+    {
+        $result = DB::table('loaisanpham')
+            ->where('idLoaiSp', $idLoaiSp)
+            ->value('giaSp');
+    
+        return $result;
+    }
+    
     // model này để lấy ra sản phẩm home có giới hạn là 8
     public function getHomeProduct()
     {

@@ -162,11 +162,20 @@
                 <a href="">Sản phẩm</a>
                 <i class='bx bxs-down-arrow'></i>
                 <ul style="height: 500px; overflow: auto" class="ch-li-sp">
-                    @foreach ($CateFt as $Ct)
+                   
+
+
+                    @if (isset($CateFt) )
+    <ul style="height: 500px; overflow: auto" class="ch-li-sp">
+        @foreach ($CateFt as $Ct)
                         <li><a
                                 href="{{ route('client.productCategories', ['idDm' => $Ct['idDm']]) }}">{{ $Ct['tenDm'] }}</a>
                         </li>
                     @endforeach
+    </ul>
+@else
+    <p>Không có danh mục nào để hiển thị.</p>
+@endif
                 </ul>
             </li>
             <li><i class='bx bx-news'></i><a href="">Tin tức công nghệ</a></li>

@@ -13,6 +13,7 @@ use App\Http\Controllers\admin\CategoryAdminController;
 use App\Http\Controllers\admin\ProductAdminController;
 use App\Http\Controllers\admin\OrdersController;
 use App\Http\Controllers\admin\UserController;
+use App\Http\Controllers\PaymentController;
 use Symfony\Component\Routing\Annotation\Route as AnnotationRoute;
 
 /*
@@ -59,8 +60,16 @@ Route::post('handle_login', [UserPageController::class, 'handleLogin'])->name('c
 Route::post('handle_register', [UserPageController::class, 'handleRegister'])->name('client.register');
 
 
+Route::get('/checkpayment', [PaymentController::class, 'checkPayment'])->name('checkpayment');
 
+Route::get('/success-page', function () {
+    return view('client.success-page'); // Trả về view 'success.blade.php'
+})->name('success.page');
 
+// Route cho trang cancel
+Route::get('/cancel-page', function () {
+    return view('client.cancel-page'); // Trả về view 'cancel.blade.php'
+})->name('cancel.page');
 
 
 // // admin routes

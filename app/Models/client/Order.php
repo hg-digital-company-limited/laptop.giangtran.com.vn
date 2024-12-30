@@ -10,6 +10,19 @@ class Order extends Model
 {
     use HasFactory;
     protected $table = "donhang";
+    protected $primaryKey = 'idDonHang'; // Đặt tên cột khóa chính
+
+    protected $fillable = [
+        'idDonHang',
+        'ten',
+        'Sdt',
+        'Email',
+        'DiaChi',
+        'trangThai', // Thêm thuộc tính này
+        'idUser',
+        'ngayMuaHang'
+    ];
+
     public function getOrdersUserId($idUser)
     {
         $results = DB::table($this->table)
@@ -87,4 +100,12 @@ class Order extends Model
             return null;
         }
     }
+    public function updateStatus($idDonHang, $status)
+    {
+        DB::table('donhang')
+            ->where('idDonHang', $idDonHang)
+            ->update(['trangThai' => $status, 'updated_at' => now()]);
+    }
+    
+
 }
