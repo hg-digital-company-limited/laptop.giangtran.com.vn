@@ -72,7 +72,8 @@
             Chọn danh mục:
             <select name="idDm" id="">
 
-                {{$selects}}
+                <?= $selects ?>
+                <!-- {{!! $selects !!}} -->
 
             </select>
             <p><label for="">icon danh mục: <a href="https://boxicons.com/?query=">icon</a></label></p>

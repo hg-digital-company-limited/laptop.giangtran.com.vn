@@ -87,10 +87,11 @@
                 enctype="multipart/form-data">
                 <div class="form-section col-12">
                     <label for="category">Danh Mục(chọn nhiều):</label>
+                   
                     <select class="form-control custom-select" id="select-Dm">
 
-                        {{`!! $selects !!`}}  
-
+                        <!-- {{!! $selects !!}}   -->
+                        <?= $selects ?>
                     </select>
                     <div id="category-added" style="display: grid; grid-template-columns: repeat(3, 1fr)">
 
